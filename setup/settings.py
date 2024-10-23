@@ -142,5 +142,8 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'COMPONENT_SPLIT_REQUEST': True,
+    # 'COMPONENT_SPLIT_REQUEST': True,
+    'TITLE': 'MINI-TWITTER PROJECT - API',
+    'DESCRIPTION': 'The Mini-Twitter API is a scalable RESTful service for a lightweight social media platform, allowing users to connect and interact through posts. It features user registration, authentication, and various interaction capabilities, creating a dynamic space for sharing thoughts and updates.',
+    'VERSION': '1.0.0',
 }
