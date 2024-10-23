@@ -4,7 +4,7 @@ from apitwitter.views import TweetListView, TweetCountView, TweetCreateView, Twe
 
 urlpatterns = [
 
-    path('list/', TweetListView.as_view(), name='tweet-list'),
+    path('list/', TweetListView.as_view(), name='tweet-list',),
     path('count/', TweetCountView.as_view(), name='tweet-count'),
     path('create/', TweetCreateView.as_view(), name='tweet-create'),
     path('<int:pk>/like/', TweetLikeView.as_view(), name='tweet-like'),
