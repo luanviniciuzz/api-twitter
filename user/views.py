@@ -39,9 +39,9 @@ class AuthTokenView(ObtainAuthToken):
         })
 
 @extend_schema(
-        summary="Manage the authenticated user. Retrieve and return the authenticated user.",
-        description="Manage the authenticated user. Retrieve and return the authenticated user.",
-    )
+    summary="Manage the authenticated user.",
+    description="Retrieve and return the authenticated user. Update the authenticated user's details.",
+)
 class ManageUserView(generics.RetrieveUpdateAPIView):
     authentication_classes = [authentication.TokenAuthentication]
     serializer_class = UserSerializer
