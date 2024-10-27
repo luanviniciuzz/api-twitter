@@ -14,89 +14,103 @@ Tasks completed for the trainee position:
 - [x] [TC.4.] Pagination
 - [x] [TC.6] Documentation
 
-## 💻 Pré-requisitos
+## 💻 Requirements
 
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
+Before you begin, make sure you have met the following requirements:
 
-- Você instalou a versão mais recente de `<linguagem / dependência / requeridos>`
-- Você tem uma máquina `<Windows / Linux / Mac>`. Indique qual sistema operacional é compatível / não compatível.
-- Você leu `<guia / link / documentação_relacionada_ao_projeto>`.
+- Python 3.8 +
+- PostgreSQL
 
-## 🚀 Instalando <nome_do_projeto>
+## 🚀 Instalation - MINI Twitter API
 
-Para instalar o <nome_do_projeto>, siga estas etapas:
+1. **Clone the repository**
 
-Linux e macOS:
+    ```bash
+    git clone https://github.com/luanviniciuzz/api-twitter.git
+    ```
+
+2. **Create a virtual environment**
+
+    ```bash
+    python -m venv venv
+    ```
+
+3. **Activate the virtual environment**
+
+    On Windows:
+    ```bash
+    .\venv\Scripts\Activate.ps1
+    ```
+
+    On macOS/Linux:
+    ```bash
+    source venv/bin/activate
+    ```
+
+4. **Install dependencies**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+    Make sure that `requirements.txt` includes the necessary libraries, such as `Django`, `djangorestframework`, and `psycopg2`.
+
+5. **Configure the Database**
+
+    In the `settings.py` file, locate the database configuration and replace it with your database details:
+
+    ```python
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'database_name',
+            'USER': 'username',
+            'PASSWORD': 'your_password',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
+    ```
+
+6. **Run migrations**
+
+    ```bash
+    python manage.py migrate
+    ```
+
+7. **Create a superuser (optional)**
+
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+    Follow the instructions to create an admin user.
+
+8. **Start the server**
+
+    ```bash
+    python manage.py runserver
+    ```
+
+    Your API will be available with the SWAGGER documentation at `http://127.0.0.1:8000/api/docs/#/`.
+    Or Admin User `http://127.0.0.1:8000/admin`
 
 ```
-<comando_de_instalação>
-```
+## ☕ USE CASES MINI TWITTER API
 
-Windows:
+### CASE 1: User Registration
+- Users should be able to sign up via the API by providing an email, username, and password.
+- Use JWT to handle authentication for login and session management.
 
-```
-<comando_de_instalação>
-```
+### CASE 2: Post Creation
+- Authenticated users can create a post with text and one image as content.
+- Posts can be liked by other users.
 
-## ☕ Usando <nome_do_projeto>
+### CASE 3: Follow/Unfollow User
+- Users should be able to follow or unfollow others.
+- The feed should only show posts from users the authenticated user follows.
 
-Para usar <nome_do_projeto>, siga estas etapas:
+### CASE 4: Viewing Feed
+- The user can view a paginated list of posts from the users they follow.
+- Posts should be ordered by creation time, from most recent to oldest.
 
-```
-<exemplo_de_uso>
-```
-
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Forneça uma referência de opções para pontos de bônus!
-
-## 📫 Contribuindo para <nome_do_projeto>
-
-Para contribuir com <nome_do_projeto>, siga estas etapas:
-
-1. Bifurque este repositório.
-2. Crie um branch: `git checkout -b <nome_branch>`.
-3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
-5. Crie a solicitação de pull.
-
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
-## 🤝 Colaboradores
-
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
-        <sub>
-          <b>Iuri Silva</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
-        <sub>
-          <b>Mark Zuckerberg</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
-        <sub>
-          <b>Steve Jobs</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
-
-## 😄 Seja um dos contribuidores
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
-## 📝 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
