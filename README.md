@@ -1,4 +1,6 @@
-# MINI Twitter API 
+# MINI Twitter API
+
+The Mini-Twitter API is a scalable RESTful service for a lightweight social media platform, allowing users to connect and interact through posts. It features user registration, authentication, and various interaction capabilities, creating a dynamic space for sharing thoughts and updates.
 
 <img src="EDR.png" alt="Exemplo imagem">
 
