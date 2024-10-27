@@ -38,7 +38,6 @@ from tweet import serializers
     )
 )
 class TweetViewSet(viewsets.ModelViewSet):
-    # """View for manage tweet APIs."""
     serializer_class = serializers.TweetDetailSerializer
     queryset = Tweet.objects.all()
     authentication_classes = [TokenAuthentication]
@@ -61,7 +60,6 @@ class TweetViewSet(viewsets.ModelViewSet):
 
 
 class LikeView(APIView):
-    """View for manage likes."""
     serializer_class = serializers.LikeSerializer
     queryset = Tweet.objects.all()
     authentication_classes = [TokenAuthentication]
