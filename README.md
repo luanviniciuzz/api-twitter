@@ -95,22 +95,9 @@ Before you begin, make sure you have met the following requirements:
     Your API will be available with the SWAGGER documentation at `http://127.0.0.1:8000/api/docs/#/`.
     Or Admin User `http://127.0.0.1:8000/admin`
 
-```
+
 ## ☕ USE CASES MINI TWITTER API
+ - To register, access the API and provide your email, username, and password. Use JSON Web Tokens (JWT) to manage your authentication when logging in and for session management. After authenticating, you can create a post that includes text and one image. You can also like posts from other users. You have the ability to follow or unfollow other users as you wish, and your feed will display only the posts from the users you are following. You can view a paginated list of posts from the users you follow, and the posts will be displayed in chronological order, from the most recent to the oldest. Follow these instructions to navigate the platform effectively!
+```
 
-### CASE 1: User Registration
-- Users should be able to sign up via the API by providing an email, username, and password.
-- Use JWT to handle authentication for login and session management.
-
-### CASE 2: Post Creation
-- Authenticated users can create a post with text and one image as content.
-- Posts can be liked by other users.
-
-### CASE 3: Follow/Unfollow User
-- Users should be able to follow or unfollow others.
-- The feed should only show posts from users the authenticated user follows.
-
-### CASE 4: Viewing Feed
-- The user can view a paginated list of posts from the users they follow.
-- Posts should be ordered by creation time, from most recent to oldest.
 
